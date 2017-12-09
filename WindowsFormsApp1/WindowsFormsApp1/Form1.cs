@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace WindowsFormsApp1
 {
@@ -75,6 +77,53 @@ namespace WindowsFormsApp1
 
 
             MessageBox.Show("+");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                SqlConnection connection = new SqlConnection("server=desktop-fpnq7im\\sqlexpress;" +
+                                      "Integrated Security=SSPI; "
+                                      + "database=Substitutions;");
+                connection.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT DISTINCT * FROM Allinfo(11)", connection);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "Allinfo(11)");
+
+                //Здесь указываешь имя нужной таблицы            
+                dataGridView1.DataSource = ds.Tables["Allinfo(11)"];
+                MessageBox.Show("______+");
+            }
+        }
+       
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
+            //Книга.
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            //Таблица.
+            ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                {
+                    ExcelApp.Cells[i + 1, j + 1] = dataGridView1.Rows[i].Cells[j].Value;
+                }
+            }
+            //Вызываем нашу созданную эксельку.
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
         }
     }
 }
