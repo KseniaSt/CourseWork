@@ -17,27 +17,17 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            form2 = new Form2();
         }
-
-        private void journalBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.journalBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.substitutionsDataSet);
-
-        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "substitutionsDataSet.Journal". При необходимости она может быть перемещена или удалена.
-            this.journalTableAdapter.Fill(this.substitutionsDataSet.Journal);
+          //  this.journalTableAdapter.Fill(this.substitutionsDataSet.Journal);
 
         }
-
-        private void journalDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -45,15 +35,27 @@ namespace WindowsFormsApp1
                                        "Integrated Security=SSPI; "
                                        + "database=Substitutions;");
             connection.Open();
-            
-
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Journal", connection);
+          
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CountHour2(1,4)", connection);
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
             DataSet ds = new DataSet();
-            da.Fill(ds, "Journal");
+            da.Fill(ds, "CountHour2(1,4)");
 
-            dataGridView1.DataSource = ds.Tables[0];
+            //Здесь указываешь имя нужной таблицы            
+            dataGridView1.DataSource = ds.Tables["CountHour2(1,4)"];
+
+
             MessageBox.Show("+");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        Form2 form2;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            form2.Show();
         }
     }
 }

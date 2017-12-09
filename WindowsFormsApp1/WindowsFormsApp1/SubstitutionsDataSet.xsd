@@ -401,6 +401,85 @@ SELECT id, LastName, FirstName, Patronymic FROM Teacher WHERE (id = @id)</Comman
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="hhTableAdapter" GeneratorDataComponentClassName="hhTableAdapter" Name="hh" UserDataComponentName="hhTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SubstitutionsConnectionString (Settings)" DbObjectName="Substitutions.dbo.hh" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, DateSubs, TeachShedule, Cause, SubShedule, Class, TeachSubs, SubjSubs, TypeSubs, Mode FROM dbo.hh</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="DateSubs" DataSetColumn="DateSubs" />
+              <Mapping SourceColumn="TeachShedule" DataSetColumn="TeachShedule" />
+              <Mapping SourceColumn="Cause" DataSetColumn="Cause" />
+              <Mapping SourceColumn="SubShedule" DataSetColumn="SubShedule" />
+              <Mapping SourceColumn="Class" DataSetColumn="Class" />
+              <Mapping SourceColumn="TeachSubs" DataSetColumn="TeachSubs" />
+              <Mapping SourceColumn="SubjSubs" DataSetColumn="SubjSubs" />
+              <Mapping SourceColumn="TypeSubs" DataSetColumn="TypeSubs" />
+              <Mapping SourceColumn="Mode" DataSetColumn="Mode" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InfoJournalTableAdapter" GeneratorDataComponentClassName="InfoJournalTableAdapter" Name="InfoJournal" UserDataComponentName="InfoJournalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SubstitutionsConnectionString (Settings)" DbObjectName="Substitutions.dbo.InfoJournal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DateSubs, FirstName, LastName, NameCause, NameSubject, NameSubst, Mode FROM dbo.InfoJournal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DateSubs" DataSetColumn="DateSubs" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="NameCause" DataSetColumn="NameCause" />
+              <Mapping SourceColumn="NameSubject" DataSetColumn="NameSubject" />
+              <Mapping SourceColumn="NameSubst" DataSetColumn="NameSubst" />
+              <Mapping SourceColumn="Mode" DataSetColumn="Mode" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InfoJournal1TableAdapter" GeneratorDataComponentClassName="InfoJournal1TableAdapter" Name="InfoJournal1" UserDataComponentName="InfoJournal1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SubstitutionsConnectionString (Settings)" DbObjectName="Substitutions.dbo.InfoJournal1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FirstName FROM dbo.InfoJournal1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InfoJournal2TableAdapter" GeneratorDataComponentClassName="InfoJournal2TableAdapter" Name="InfoJournal2" UserDataComponentName="InfoJournal2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SubstitutionsConnectionString (Settings)" DbObjectName="Substitutions.dbo.InfoJournal2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FirstName FROM dbo.InfoJournal2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClassSubsTableAdapter" GeneratorDataComponentClassName="ClassSubsTableAdapter" Name="ClassSubs" UserDataComponentName="ClassSubsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="SubstitutionsConnectionString (Settings)" DbObjectName="Substitutions.dbo.ClassSubs" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -631,6 +710,97 @@ SELECT id, LastName, FirstName, Patronymic FROM Teacher WHERE (id = @id)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="hh" msprop:Generator_TableClassName="hhDataTable" msprop:Generator_TableVarName="tablehh" msprop:Generator_TablePropName="hh" msprop:Generator_RowDeletingName="hhRowDeleting" msprop:Generator_RowChangingName="hhRowChanging" msprop:Generator_RowEvHandlerName="hhRowChangeEventHandler" msprop:Generator_RowDeletedName="hhRowDeleted" msprop:Generator_UserTableName="hh" msprop:Generator_RowChangedName="hhRowChanged" msprop:Generator_RowEvArgName="hhRowChangeEvent" msprop:Generator_RowClassName="hhRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="DateSubs" msprop:Generator_ColumnVarNameInTable="columnDateSubs" msprop:Generator_ColumnPropNameInRow="DateSubs" msprop:Generator_ColumnPropNameInTable="DateSubsColumn" msprop:Generator_UserColumnName="DateSubs" type="xs:dateTime" />
+              <xs:element name="TeachShedule" msprop:Generator_ColumnVarNameInTable="columnTeachShedule" msprop:Generator_ColumnPropNameInRow="TeachShedule" msprop:Generator_ColumnPropNameInTable="TeachSheduleColumn" msprop:Generator_UserColumnName="TeachShedule" type="xs:int" />
+              <xs:element name="Cause" msprop:Generator_ColumnVarNameInTable="columnCause" msprop:Generator_ColumnPropNameInRow="Cause" msprop:Generator_ColumnPropNameInTable="CauseColumn" msprop:Generator_UserColumnName="Cause" type="xs:int" />
+              <xs:element name="SubShedule" msprop:Generator_ColumnVarNameInTable="columnSubShedule" msprop:Generator_ColumnPropNameInRow="SubShedule" msprop:Generator_ColumnPropNameInTable="SubSheduleColumn" msprop:Generator_UserColumnName="SubShedule" type="xs:int" minOccurs="0" />
+              <xs:element name="Class" msprop:Generator_ColumnVarNameInTable="columnClass" msprop:Generator_ColumnPropNameInRow="Class" msprop:Generator_ColumnPropNameInTable="ClassColumn" msprop:Generator_UserColumnName="Class" type="xs:int" minOccurs="0" />
+              <xs:element name="TeachSubs" msprop:Generator_ColumnVarNameInTable="columnTeachSubs" msprop:Generator_ColumnPropNameInRow="TeachSubs" msprop:Generator_ColumnPropNameInTable="TeachSubsColumn" msprop:Generator_UserColumnName="TeachSubs" type="xs:int" minOccurs="0" />
+              <xs:element name="SubjSubs" msprop:Generator_ColumnVarNameInTable="columnSubjSubs" msprop:Generator_ColumnPropNameInRow="SubjSubs" msprop:Generator_ColumnPropNameInTable="SubjSubsColumn" msprop:Generator_UserColumnName="SubjSubs" type="xs:int" minOccurs="0" />
+              <xs:element name="TypeSubs" msprop:Generator_ColumnVarNameInTable="columnTypeSubs" msprop:Generator_ColumnPropNameInRow="TypeSubs" msprop:Generator_ColumnPropNameInTable="TypeSubsColumn" msprop:Generator_UserColumnName="TypeSubs" type="xs:int" minOccurs="0" />
+              <xs:element name="Mode" msprop:Generator_ColumnVarNameInTable="columnMode" msprop:Generator_ColumnPropNameInRow="Mode" msprop:Generator_ColumnPropNameInTable="ModeColumn" msprop:Generator_UserColumnName="Mode" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InfoJournal" msprop:Generator_TableClassName="InfoJournalDataTable" msprop:Generator_TableVarName="tableInfoJournal" msprop:Generator_TablePropName="InfoJournal" msprop:Generator_RowDeletingName="InfoJournalRowDeleting" msprop:Generator_RowChangingName="InfoJournalRowChanging" msprop:Generator_RowEvHandlerName="InfoJournalRowChangeEventHandler" msprop:Generator_RowDeletedName="InfoJournalRowDeleted" msprop:Generator_UserTableName="InfoJournal" msprop:Generator_RowChangedName="InfoJournalRowChanged" msprop:Generator_RowEvArgName="InfoJournalRowChangeEvent" msprop:Generator_RowClassName="InfoJournalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateSubs" msprop:Generator_ColumnVarNameInTable="columnDateSubs" msprop:Generator_ColumnPropNameInRow="DateSubs" msprop:Generator_ColumnPropNameInTable="DateSubsColumn" msprop:Generator_UserColumnName="DateSubs" type="xs:dateTime" />
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NameCause" msprop:Generator_ColumnVarNameInTable="columnNameCause" msprop:Generator_ColumnPropNameInRow="NameCause" msprop:Generator_ColumnPropNameInTable="NameCauseColumn" msprop:Generator_UserColumnName="NameCause">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NameSubject" msprop:Generator_ColumnVarNameInTable="columnNameSubject" msprop:Generator_ColumnPropNameInRow="NameSubject" msprop:Generator_ColumnPropNameInTable="NameSubjectColumn" msprop:Generator_UserColumnName="NameSubject">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NameSubst" msprop:Generator_ColumnVarNameInTable="columnNameSubst" msprop:Generator_ColumnPropNameInRow="NameSubst" msprop:Generator_ColumnPropNameInTable="NameSubstColumn" msprop:Generator_UserColumnName="NameSubst">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mode" msprop:Generator_ColumnVarNameInTable="columnMode" msprop:Generator_ColumnPropNameInRow="Mode" msprop:Generator_ColumnPropNameInTable="ModeColumn" msprop:Generator_UserColumnName="Mode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InfoJournal1" msprop:Generator_TableClassName="InfoJournal1DataTable" msprop:Generator_TableVarName="tableInfoJournal1" msprop:Generator_TablePropName="InfoJournal1" msprop:Generator_RowDeletingName="InfoJournal1RowDeleting" msprop:Generator_RowChangingName="InfoJournal1RowChanging" msprop:Generator_RowEvHandlerName="InfoJournal1RowChangeEventHandler" msprop:Generator_RowDeletedName="InfoJournal1RowDeleted" msprop:Generator_UserTableName="InfoJournal1" msprop:Generator_RowChangedName="InfoJournal1RowChanged" msprop:Generator_RowEvArgName="InfoJournal1RowChangeEvent" msprop:Generator_RowClassName="InfoJournal1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InfoJournal2" msprop:Generator_TableClassName="InfoJournal2DataTable" msprop:Generator_TableVarName="tableInfoJournal2" msprop:Generator_TablePropName="InfoJournal2" msprop:Generator_RowDeletingName="InfoJournal2RowDeleting" msprop:Generator_RowChangingName="InfoJournal2RowChanging" msprop:Generator_RowEvHandlerName="InfoJournal2RowChangeEventHandler" msprop:Generator_RowDeletedName="InfoJournal2RowDeleted" msprop:Generator_UserTableName="InfoJournal2" msprop:Generator_RowChangedName="InfoJournal2RowChanged" msprop:Generator_RowEvArgName="InfoJournal2RowChangeEvent" msprop:Generator_RowClassName="InfoJournal2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="ClassSubs" msprop:Generator_TableClassName="ClassSubsDataTable" msprop:Generator_TableVarName="tableClassSubs" msprop:Generator_TablePropName="ClassSubs" msprop:Generator_RowDeletingName="ClassSubsRowDeleting" msprop:Generator_RowChangingName="ClassSubsRowChanging" msprop:Generator_RowEvHandlerName="ClassSubsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClassSubsRowDeleted" msprop:Generator_UserTableName="ClassSubs" msprop:Generator_RowChangedName="ClassSubsRowChanged" msprop:Generator_RowEvArgName="ClassSubsRowChangeEvent" msprop:Generator_RowClassName="ClassSubsRow">
           <xs:complexType>
             <xs:sequence>
@@ -747,6 +917,10 @@ SELECT id, LastName, FirstName, Patronymic FROM Teacher WHERE (id = @id)</Comman
     </xs:unique>
     <xs:unique name="Teacher_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Teacher" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="hh_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:hh" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
     <xs:unique name="ClassSubs_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
