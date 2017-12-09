@@ -36,13 +36,13 @@ namespace WindowsFormsApp1
                                        + "database=Substitutions;");
             connection.Open();
           
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CountHour2(1,4)", connection);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM InfoJournal3", connection);
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
             DataSet ds = new DataSet();
-            da.Fill(ds, "CountHour2(1,4)");
+            da.Fill(ds, "InfoJournal3");
 
             //Здесь указываешь имя нужной таблицы            
-            dataGridView1.DataSource = ds.Tables["CountHour2(1,4)"];
+            dataGridView1.DataSource = ds.Tables["InfoJournal3"];
 
 
             MessageBox.Show("+");
@@ -56,6 +56,25 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             form2.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection("server=desktop-fpnq7im\\sqlexpress;" +
+                                      "Integrated Security=SSPI; "
+                                      + "database=Substitutions;");
+            connection.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM allinfo", connection);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "allinfo");
+
+            //Здесь указываешь имя нужной таблицы            
+            dataGridView1.DataSource = ds.Tables["allinfo"];
+
+
+            MessageBox.Show("+");
         }
     }
 }
