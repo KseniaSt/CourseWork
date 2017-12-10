@@ -64,8 +64,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SubstitutionsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SubstitutionsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubstitutionsDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +103,17 @@
     </None>
     <None Include="SubstitutionsDataSet.xss">
       <DependentUpon>SubstitutionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SubstitutionsDataSet1.xsc">
+      <DependentUpon>SubstitutionsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SubstitutionsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SubstitutionsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SubstitutionsDataSet1.xss">
+      <DependentUpon>SubstitutionsDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

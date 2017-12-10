@@ -67,13 +67,13 @@ namespace WindowsFormsApp1
                                       + "database=Substitutions;");
             connection.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM allinfo", connection);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DISTINCT * FROM AllInfo()", connection);
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
             DataSet ds = new DataSet();
-            da.Fill(ds, "allinfo");
+            da.Fill(ds, "AllInfo()");
 
             //Здесь указываешь имя нужной таблицы            
-            dataGridView1.DataSource = ds.Tables["allinfo"];
+            dataGridView1.DataSource = ds.Tables["AllInfo()"];
 
 
             MessageBox.Show("+");
@@ -92,13 +92,13 @@ namespace WindowsFormsApp1
                                       "Integrated Security=SSPI; "
                                       + "database=Substitutions;");
                 connection.Open();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT DISTINCT * FROM Allinfo(11)", connection);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT DISTINCT * FROM AllinfoMonth(11)", connection);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);
                 DataSet ds = new DataSet();
-                da.Fill(ds, "Allinfo(11)");
+                da.Fill(ds, "AllinfoMonth(11)");
 
                 //Здесь указываешь имя нужной таблицы            
-                dataGridView1.DataSource = ds.Tables["Allinfo(11)"];
+                dataGridView1.DataSource = ds.Tables["AllinfoMonth(11)"];
                 MessageBox.Show("______+");
             }
         }
