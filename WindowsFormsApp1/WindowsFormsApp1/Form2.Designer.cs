@@ -36,6 +36,7 @@
             this.journalTableAdapter = new WindowsFormsApp1.SubstitutionsDataSetTableAdapters.JournalTableAdapter();
             this.teacherTableAdapter = new WindowsFormsApp1.SubstitutionsDataSetTableAdapters.TeacherTableAdapter();
             this.cause = new System.Windows.Forms.ComboBox();
+            this.causeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,15 +44,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.sub1 = new System.Windows.Forms.ComboBox();
+            this.disciplineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.sub2 = new System.Windows.Forms.ComboBox();
+            this.disciplineBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.substitutionsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.substitutionsDataSet1 = new WindowsFormsApp1.SubstitutionsDataSet1();
             this.button1 = new System.Windows.Forms.Button();
-            this.causeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.causeTableAdapter = new WindowsFormsApp1.SubstitutionsDataSetTableAdapters.CauseTableAdapter();
-            this.disciplineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.disciplineTableAdapter = new WindowsFormsApp1.SubstitutionsDataSetTableAdapters.DisciplineTableAdapter();
             this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.classTableAdapter = new WindowsFormsApp1.SubstitutionsDataSetTableAdapters.ClassTableAdapter();
@@ -59,9 +61,6 @@
             this.modeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.modeTableAdapter = new WindowsFormsApp1.SubstitutionsDataSetTableAdapters.ModeTableAdapter();
             this.fKJournalSubShed571DF1D5BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.substitutionsDataSet1 = new WindowsFormsApp1.SubstitutionsDataSet1();
-            this.substitutionsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.disciplineBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.disciplineTableAdapter1 = new WindowsFormsApp1.SubstitutionsDataSet1TableAdapters.DisciplineTableAdapter();
             this.teacherBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.teacherTableAdapter1 = new WindowsFormsApp1.SubstitutionsDataSet1TableAdapters.TeacherTableAdapter();
@@ -69,24 +68,30 @@
             this.journalTableAdapter1 = new WindowsFormsApp1.SubstitutionsDataSet1TableAdapters.JournalTableAdapter();
             this.teach2 = new System.Windows.Forms.ComboBox();
             this.type = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.classifierBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             this.classifierTableAdapter = new WindowsFormsApp1.SubstitutionsDataSetTableAdapters.ClassifierTableAdapter();
+            this.substitutionsDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.classBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.causeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.disciplineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplineBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKJournalSubShed571DF1D5BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.disciplineBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKJournalTeachSh5535A963BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classifierBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // teach1
@@ -136,6 +141,12 @@
             this.cause.Size = new System.Drawing.Size(232, 28);
             this.cause.TabIndex = 1;
             this.cause.ValueMember = "id";
+            this.cause.SelectedIndexChanged += new System.EventHandler(this.cause_SelectedIndexChanged);
+            // 
+            // causeBindingSource
+            // 
+            this.causeBindingSource.DataMember = "Cause";
+            this.causeBindingSource.DataSource = this.substitutionsDataSet;
             // 
             // dateTimePicker1
             // 
@@ -219,6 +230,11 @@
             this.sub1.TabIndex = 8;
             this.sub1.ValueMember = "id";
             // 
+            // disciplineBindingSource
+            // 
+            this.disciplineBindingSource.DataMember = "Discipline";
+            this.disciplineBindingSource.DataSource = this.substitutionsDataSet;
+            // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
@@ -237,24 +253,9 @@
             this.comboBox4.Location = new System.Drawing.Point(347, 320);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(57, 28);
+            this.comboBox4.Size = new System.Drawing.Size(67, 28);
             this.comboBox4.TabIndex = 9;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "А",
-            "Б",
-            "В",
-            "Г"});
-            this.comboBox5.Location = new System.Drawing.Point(412, 320);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(57, 28);
-            this.comboBox5.TabIndex = 10;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -293,6 +294,21 @@
             this.sub2.ValueMember = "id";
             this.sub2.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
+            // disciplineBindingSource1
+            // 
+            this.disciplineBindingSource1.DataMember = "Discipline";
+            this.disciplineBindingSource1.DataSource = this.substitutionsDataSet1BindingSource;
+            // 
+            // substitutionsDataSet1BindingSource
+            // 
+            this.substitutionsDataSet1BindingSource.DataSource = this.substitutionsDataSet1;
+            this.substitutionsDataSet1BindingSource.Position = 0;
+            // 
+            // substitutionsDataSet1
+            // 
+            this.substitutionsDataSet1.DataSetName = "SubstitutionsDataSet1";
+            this.substitutionsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -307,19 +323,9 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // causeBindingSource
-            // 
-            this.causeBindingSource.DataMember = "Cause";
-            this.causeBindingSource.DataSource = this.substitutionsDataSet;
-            // 
             // causeTableAdapter
             // 
             this.causeTableAdapter.ClearBeforeFill = true;
-            // 
-            // disciplineBindingSource
-            // 
-            this.disciplineBindingSource.DataMember = "Discipline";
-            this.disciplineBindingSource.DataSource = this.substitutionsDataSet;
             // 
             // disciplineTableAdapter
             // 
@@ -352,21 +358,6 @@
             // 
             this.fKJournalSubShed571DF1D5BindingSource.DataMember = "FK__Journal__SubShed__571DF1D5";
             this.fKJournalSubShed571DF1D5BindingSource.DataSource = this.disciplineBindingSource;
-            // 
-            // substitutionsDataSet1
-            // 
-            this.substitutionsDataSet1.DataSetName = "SubstitutionsDataSet1";
-            this.substitutionsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // substitutionsDataSet1BindingSource
-            // 
-            this.substitutionsDataSet1BindingSource.DataSource = this.substitutionsDataSet1;
-            this.substitutionsDataSet1BindingSource.Position = 0;
-            // 
-            // disciplineBindingSource1
-            // 
-            this.disciplineBindingSource1.DataMember = "Discipline";
-            this.disciplineBindingSource1.DataSource = this.substitutionsDataSet1BindingSource;
             // 
             // disciplineTableAdapter1
             // 
@@ -418,6 +409,11 @@
             this.type.ValueMember = "id";
             this.type.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
+            // classifierBindingSource
+            // 
+            this.classifierBindingSource.DataMember = "Classifier";
+            this.classifierBindingSource.DataSource = this.substitutionsDataSetBindingSource;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -430,14 +426,36 @@
             this.label8.Text = "Тип заміни:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // classifierBindingSource
-            // 
-            this.classifierBindingSource.DataMember = "Classifier";
-            this.classifierBindingSource.DataSource = this.substitutionsDataSetBindingSource;
-            // 
             // classifierTableAdapter
             // 
             this.classifierTableAdapter.ClearBeforeFill = true;
+            // 
+            // substitutionsDataSetBindingSource1
+            // 
+            this.substitutionsDataSetBindingSource1.DataSource = this.substitutionsDataSet;
+            this.substitutionsDataSetBindingSource1.Position = 0;
+            // 
+            // classBindingSource1
+            // 
+            this.classBindingSource1.DataMember = "Class";
+            this.classBindingSource1.DataSource = this.substitutionsDataSetBindingSource1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(421, 320);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(67, 28);
+            this.comboBox1.TabIndex = 20;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_2);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(495, 326);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 28);
+            this.comboBox2.TabIndex = 21;
             // 
             // Form2
             // 
@@ -445,6 +463,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(658, 440);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.type);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
@@ -452,7 +472,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.teach2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.sub1);
             this.Controls.Add(this.label5);
@@ -473,16 +492,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.causeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.disciplineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disciplineBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKJournalSubShed571DF1D5BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.disciplineBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKJournalTeachSh5535A963BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classifierBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.substitutionsDataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,7 +526,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox sub1;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox sub2;
@@ -533,5 +553,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.BindingSource classifierBindingSource;
         private SubstitutionsDataSetTableAdapters.ClassifierTableAdapter classifierTableAdapter;
+        private System.Windows.Forms.BindingSource classBindingSource1;
+        private System.Windows.Forms.BindingSource substitutionsDataSetBindingSource1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
